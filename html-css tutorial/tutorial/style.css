@@ -1,0 +1,16 @@
+body{
+    background-color:skyblue ;
+}
+h1{
+    color: white;
+}
+p{
+    background-color: gray ;
+    color: white;
+}
+#p1{
+    color:black;
+}
+.even{
+    color: blue;
+}
