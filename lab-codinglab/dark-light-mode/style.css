@@ -57,7 +57,7 @@ nav .navbar{
 
 
 .appearance .light-dark,
-.appearance .color-icons{
+.appearance .color-icons .icons{
     height: 50px;
     width: 50px;
     text-align: center;
@@ -69,6 +69,7 @@ nav .navbar{
     background: var(--switchers-main);
     opacity: 0.8;
     cursor: pointer;
+
 }
 
 .appearance .color-icons .icons{
@@ -98,6 +99,8 @@ nav .navbar{
     color: var(--nav-main);
     margin: 10px;
     margin-bottom: 10px;
+    opacity: 0;
+    pointer-events: none;
 }
 .color-icons .color-box::before{
     content: ' ';
@@ -159,9 +162,33 @@ nav .navbar{
       padding: 0 60px;
       
   }
-  .home-content h2{
+    .home-content h2{
       font-size: 40px;
-  }
+      color : var(--black);
+     }
   .home-content h3{
     font-size: 35;
-}
+    color : var(--black);
+    }
+    .home-content h3 span{
+    color: var(--nav-main);
+    }
+    .home-content p{
+        font-size: 14px;
+        width: 40%;
+        margin-bottom: 30px;
+    }   
+    .home-content a{
+        font-size: 20px;
+        padding: 12px 24px;
+        color: var(--white);
+        background: var(--nav-main);
+        text-decoration: none;
+        border-radius: 6px;
+    }
+    .home-content a:hover{
+        background-color: var(--switchers-main);
+    }
+    .home-content a i{
+        transform: rotate(45deg);
+    }
