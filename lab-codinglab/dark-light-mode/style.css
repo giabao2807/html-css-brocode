@@ -1,3 +1,4 @@
+/* Google fonts import link */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
 *{
   margin: 0;
@@ -7,188 +8,216 @@
   transition: all 0.3s ease;
 }
 :root{
-    --white: #fff;
-    --black: #24292d;
-    --nav-main: rgb(255, 133, 154);
-    --switchers-main: #973663;
-    --light-bg: #F0F8FF;
+  --white: #fff;
+  --black: #24292d;
+  --nav-main: #f7a0e4;
+  --switchers-main: #8a3e83;
+  --light-bg: #F0F8FF;
 }
 nav{
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 70px;
-    width: 100%;
-    background: var(--nav-main);
-    padding: 0 30px;
+  position: fixed;
+  height: 70px;
+  width: 100%;
+  background: var(--nav-main);
+  box-shadow: 0 5px 10px rgba(0,0,0,0.1);
 }
 nav .navbar{
-    height: 100%;
-    max-width: 1300px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin: auto;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  max-width: 1300px;
+  margin: auto;
+  padding: 0 30px;
+  justify-content: space-between;
 }
-.navbar a{
-    font-size: 30px;
-    font-weight: 500;
-    color: var(--white);
-    text-decoration: none;
+nav .navbar a{
+  font-size: 30px;
+  font-weight: 500;
+  color: var(--white);
+  text-decoration: none;
 }
-.navbar .nav-links{
-    display: flex;
-}
-.navbar .nav-links li{
-    list-style: none;
-    margin: 0 20px;
-    display: flex;
-}
-.navbar .nav-links a li{
-    font-size: 18px;
-    font-weight: 400;
-    opacity: 0.9;
-}
-
-.navbar .appearance{
-    display: flex;
-    align-items: center;
-}
-
-
-.appearance .light-dark,
-.appearance .color-icons .icons{
-    height: 50px;
-    width: 50px;
-    text-align: center;
-    line-height: 50px;
-    color: var(--white);
-    font-size: 20px;
-    margin: 0 10px;
-    border-radius: 6px;
-    background: var(--switchers-main);
-    opacity: 0.8;
-    cursor: pointer;
-
-}
-
-.appearance .color-icons .icons{
-    width: 70px;
-}
-.appearance .light-dark:hover,
-.appearance .color-icons .icons:hover{
-    opacity: 1;
-}
-
-.appearance .color-box{
-    position: absolute;
-    bottom: -133px;
-    right: 0;
-    min-height: 100px;
-    background: var(--white);
-    padding: 16px 20px 20px 20px;
-    border: 6px; 
-}
-.appearance .color-icons .color-box h3{
-    white-space:  nowrap;
-    display: inline-block;
-    font-size: 16px;
-    font-weight: 600;
-    width: 100%;
-    text-align: left;
-    color: var(--nav-main);
-    margin: 10px;
-    margin-bottom: 10px;
-    opacity: 0;
-    pointer-events: none;
-}
-.color-icons .color-box::before{
-    content: ' ';
-    position: absolute;
-    height: 30px;
-    width: 30px;
-    right: 20px;
-    border-radius: 50%;
-    top: -10px;
-    background-color: var(--white);
-}
-.appearance .color-box .color-switcher{
-    display: flex;
+ .navbar .nav-links{
+   display: flex;
  }
- .color-box .color-switcher .btn{
-    display: inline-block;
-    height: 40px;
-    width: 40px;
-    border: none;
-    outline: none;
-    border-radius: 50%;
-    margin: 0 5px;
-    cursor: pointer;
-    background: #4070F4;
+ .navbar .nav-links li{
+   margin: 0 8px;
+   list-style: none;
+   display: flex;
+ }
+ .navbar .nav-links a{
+   font-size: 18px;
+   font-weight: 400;
+   opacity: 1;
+ }
+  .navbar .nav-links a:hover{
+    opacity: 1;
   }
-  .color-switcher .btn.blue.active{
-    box-shadow: 0 0 0 2px #fff,
-                0 0 0 4px #4070F4;
+ .navbar .appearance{
+   display: flex;
+   align-items: center;
+ }
+ .appearance .light-dark,
+ .appearance .icons{
+  height: 50px;
+  width: 50px;
+  border-radius: 6px;
+  line-height: 50px;
+  text-align: center;
+  color: var(--white);
+  font-size: 20px;
+  background: var(--switchers-main);
+  cursor: pointer;
+}
+.appearance .light-dark i,
+.appearance .icons i{
+  opacity: 1;
+}
+.appearance .light-dark:hover i,
+.appearance .icons:hover i{
+  opacity: 1;
+}
+.appearance .light-dark:hover{
+  box-shadow: 0 5px 10px rgba(0,0,0,0.1)
+}
+.appearance .light-dark i{
+  height: 100%;
+  width: 100%;
+}
+ .appearance .color-icon{
+   position: relative;
+ }
+ .appearance .icons{
+   width: 70px;
+   height: 50px;
+   margin-left: 14px;
+ }
+ .appearance .color-box{
+   position: absolute;
+   bottom: -133px;
+   right: 0;
+   min-height: 100px;
+   background: var(--white);
+   padding: 16px 20px 20px 20px;
+   border-radius: 6px;
+   box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+   opacity: 0;
+   pointer-events: none;
+ }
+ .color-box::before{
+   content: '';
+   position: absolute;
+   top: -10px;
+   right: 20px;
+   height: 30px;
+   width: 30px;
+   border-radius: 50%;
+   background: var(--white);
+   transform: rotate(45deg);
+ }
+ .color-icon.open .color-box{
+   opacity: 1;
+   pointer-events: auto;
+ }
+  .color-icon.open .arrow{
+    transform: rotate(-180deg);
   }
-  .color-switcher .btn.orange{
-    background: #F79F1F;
-  }
-  .color-switcher .btn.orange.active{
-    box-shadow: 0 0 0 2px #fff,
-                0 0 0 4px #F79F1F;
-  }
-  .color-switcher .btn.purple{
-    background: #8e44ad;
-  }
-  .color-switcher .btn.purple.active{
-    box-shadow: 0 0 0 2px #fff,
-                0 0 0 4px #8e44Ad;
-  }
-  .color-switcher .btn.green{
-    background: #3A9943;
-  }
-  .color-switcher .btn.green.active{
-    box-shadow: 0 0 0 2px #fff,
-                0 0 0 4px #3A9943;
-  }
+ .appearance .color-box h3{
+   font-size: 16px;
+   font-weight: 600;
+   display: block;
+   color: var(--nav-main);
+   text-align: left;
+   white-space: nowrap;
+   margin-bottom: 10px;
+ }
+.appearance .color-box .color-switchers{
+   display: flex;
+}
+.color-box .color-switchers .btn{
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  border: none;
+  outline: none;
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+  background: #4070F4;
 
-  .home-content{
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      height: 100vh;
-      width: 100%;
-      background-color: var(--light-bg);
-      padding: 0 60px;
-      
+}
+.color-switchers .btn.blue.active{
+  box-shadow: 0 0 0 2px #fff,
+              0 0 0 4px #4070F4;
+}
+.color-switchers .btn.orange{
+  background: #F79F1F;
+}
+.color-switchers .btn.orange.active{
+  box-shadow: 0 0 0 2px #fff,
+              0 0 0 4px #F79F1F;
+}
+.color-switchers .btn.purple{
+  background: #8e44ad;
+}
+.color-switchers .btn.purple.active{
+  box-shadow: 0 0 0 2px #fff,
+              0 0 0 4px #8e44Ad;
+}
+.color-switchers .btn.green{
+  background: #3A9943;
+}
+.color-switchers .btn.green.active{
+  box-shadow: 0 0 0 2px #fff,
+              0 0 0 4px #3A9943;
+}
+.home-content{
+  height: 100vh;
+  width: 100%;
+  background: var(--light-bg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 60px;
+}
+.home-content h2{
+  color: var(--black);
+  font-size: 50px;
+}
+.home-content h3{
+  color: var(--black);
+  font-size: 42px;
+  margin-top: -8px;
+}
+.home-content h3 span{
+  color: var(--nav-main);
+}
+.home-content h3 span.darkMode{
+  color: var(--black);
+}
+.home-content p{
+  color: var(--black);
+  font-size: 16px;
+  width: 45%;
+  text-align: justify;
+  margin: 4px 0 30px 0;
+}
+.home-content a{
+  color: #fff;
+  font-size: 20px;
+  padding: 12px 24px;
+  border-radius: 6px;
+  text-decoration: none;
+  background: var(--nav-main);
+}
+.home-content a i{
+  transform: rotate(45deg);
+  font-size: 16px;
+}
+.home-content a:hover{
+  background: var(--switchers-main);
+}
+@media (max-width: 1050px) {
+  .home-content p{
+    width: 70%;
   }
-    .home-content h2{
-      font-size: 40px;
-      color : var(--black);
-     }
-  .home-content h3{
-    font-size: 35;
-    color : var(--black);
-    }
-    .home-content h3 span{
-    color: var(--nav-main);
-    }
-    .home-content p{
-        font-size: 14px;
-        width: 40%;
-        margin-bottom: 30px;
-    }   
-    .home-content a{
-        font-size: 20px;
-        padding: 12px 24px;
-        color: var(--white);
-        background: var(--nav-main);
-        text-decoration: none;
-        border-radius: 6px;
-    }
-    .home-content a:hover{
-        background-color: var(--switchers-main);
-    }
-    .home-content a i{
-        transform: rotate(45deg);
-    }
+}
